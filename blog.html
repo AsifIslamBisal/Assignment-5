@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="styles/style.css">
+              <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/bc6324b2dd.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+        <header>
+            <div class="navbar">
+                <button  class="btn"><a href="index.html">Blog</a></button>
+                <div class="coin">
+                    <img src="./assets/logo.png" alt="">
+                    <h4>Donate Bangladesh</h4>
+                </div>
+                <div class="coin">
+                    <img src="./assets/coin.png">
+                    <h4>10000BDT</h4>
+                </div>
+            </div>
+            
+        </header>
+        <main>
+        <div class="container">
+          <h1>Important FAQ <i class="fa-solid fa-circle-question fa-bounce" style="color: #63E6BE;"></i></h1>
+    
+          <div class="faq">
+            <button class="qus">
+              What is the Document Object Model(DOM)?
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="text">
+              <p>
+                The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a webpage so that programs can interact with and modify the content, structure, and styling of the document dynamically.
+              </p>
+            </div>
+          </div>
+    
+          <div class="faq">
+            <button class="qus">
+              How do you select on element from the Dom?
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="text">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis
+                saepe molestiae distinctio asperiores cupiditate consequuntur dolor
+                ullam, iure eligendi harum eaque hic corporis debitis porro
+                consectetur voluptate rem officiis architecto.
+              </p>
+            </div>
+          </div>
+    
+          <div class="faq">
+            <button class="qus">
+            What is event delegation in the context of the DOM, and why is it useful?
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="text">
+              <p>
+                Event delegation is a technique in the DOM that allows you to handle events at a higher level in the DOM hierarchy rather than attaching event listeners to specific child elements. This is useful for managing events efficiently, especially when you have many child elements, or when new elements are dynamically added or removed from the DOM.
+              </p>
+            </div>
+          </div>
+    
+          <div class="faq">
+            <button class="qus">
+              How do you manipulate an element's attributes and styles using the Dom?
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="text">
+              <p>
+                Manipulating an element's attributes and styles using the DOM in JavaScript is very straightforward.setAttribute(), getAttribute(), and removeAttribute() to manipulate HTML attributes.
+              </p>
+            </div>
+          </div>
+        </main>
+    
+        <script>
+          let acc = document.getElementsByClassName("qus");
+          let i;
+    
+          for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+              this.classList.toggle("active");
+              this.parentElement.classList.toggle("active");
+    
+              let text = this.nextElementSibling;
+    
+              if (text.style.display === "block") {
+                text.style.display = "none";
+              } else {
+                text.style.display = "block";
+              }
+            });
+          }
+        </script>
+      </body>
+</html>
