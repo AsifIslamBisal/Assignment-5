@@ -1,107 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-    <link rel="stylesheet" href="styles/style.css">
-          <!-- google fonts -->
-          <link rel="preconnect" href="https://fonts.googleapis.com">
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-          <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-    <!-- icons -->
-    <script src="https://kit.fontawesome.com/bc6324b2dd.js" crossorigin="anonymous"></script>
-    </head>
-    
-    <body>
-        <header>
-            <div class="navbar">
-                <button  class="btn"><a href="index.html"><h4>Home</h4></a></button>
-                <div class="coin">
-                    <img src="./assets/logo.png" alt="">
-                    <h4>Donate Bangladesh</h4>
-                </div>
-                <div class="coin">
-                    <img src="./assets/coin.png">
-                    <h4>10000BDT</h4>
-                </div>
-            </div>
-            
-        </header>
-        <main>
-        <div class="container">
-          <h1>Important FAQ <i class="fa-solid fa-circle-question fa-bounce" style="color: #63E6BE;"></i></h1>
-    
-          <div class="faq">
-            <button class="qus">
-              What is the Document Object Model(DOM)?
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <div class="text">
-              <p>
-                The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a webpage so that programs can interact with and modify the content, structure, and styling of the document dynamically.
-              </p>
-            </div>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home section</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="h-[180px] sticky top-0">
+      <section class="p-12 flex justify-between">
+        <div>
+          <button id="change-blog-btn" class="btn btn-success">Home</button>
+        </div>
+        <div class="flex">
+          <img class="hidden lg:block" src="./assets/logo.png" alt="" />
+          <p class="ml-8 lg:m-4 lg:text-xl lg:font-bold">
+            As-Sunnah Foundation
+          </p>
+        </div>
+        <div class="flex"></div>
+          <div class="flex p-2">
+            <img class="pr-2 pb-3" src="./assets/coin.png" alt="" />
+            <span id="bank-balance">10000</span> 
+            <p class="pl-1">BDT</p>
           </div>
-    
-          <div class="faq">
-            <button class="qus">
-              How do you select on element from the Dom?
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <div class="text">
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis
-                saepe molestiae distinctio asperiores cupiditate consequuntur dolor
-                ullam, iure eligendi harum eaque hic corporis debitis porro
-                consectetur voluptate rem officiis architecto.
-              </p>
-            </div>
-          </div>
-    
-          <div class="faq">
-            <button class="qus">
-            What is event delegation in the context of the DOM, and why is it useful?
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <div class="text">
-              <p>
-                Event delegation is a technique in the DOM that allows you to handle events at a higher level in the DOM hierarchy rather than attaching event listeners to specific child elements. This is useful for managing events efficiently, especially when you have many child elements, or when new elements are dynamically added or removed from the DOM.
-              </p>
-            </div>
-          </div>
-    
-          <div class="faq">
-            <button class="qus">
-              How do you manipulate an element's attributes and styles using the Dom?
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <div class="text">
-              <p>
-                Manipulating an element's attributes and styles using the DOM in JavaScript is very straightforward.setAttribute(), getAttribute(), and removeAttribute() to manipulate HTML attributes.
-              </p>
-            </div>
-          </div>
-        </main>
-    
-        <script>
-          let acc = document.getElementsByClassName("qus");
-          let i;
-    
-          for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function () {
-              this.classList.toggle("active");
-              this.parentElement.classList.toggle("active");
-    
-              let text = this.nextElementSibling;
-    
-              if (text.style.display === "block") {
-                text.style.display = "none";
-              } else {
-                text.style.display = "block";
-              }
-            });
-          }
-        </script>
-      </body>
+        </div>
+      </section>
+    </header>
+    <main class="p-10 pt-20">
+      <div class="pb-8">
+        <h1 class="text-3xl font-bold">Frequently Asked Qus (FQA) ?</h1>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium">
+          What is Document Object Model?
+        </div>
+        <div class="collapse-content">
+          <p>
+            The Document Object Model (DOM) is a programming API for HTML and
+            XML documents. It defines the logical structure of documents and the
+            way a document is accessed and manipulated.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          What is the Full meaning off HTML?
+        </div>
+        <div class="collapse-content">
+          <p>
+            HTML stands for Hyper Text Markup Language. HTML is the standard
+            markup language for creating Web pages. HTML describes the structure
+            of a Web page.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          What is the full meaning of CSS?
+        </div>
+        <div class="collapse-content">
+          <p>
+            CSS is the acronym of “Cascading Style Sheets”. CSS is a computer
+            language for laying out and structuring web pages (HTML or XML).
+            This language contains coding elements and is composed of these
+            “cascading style sheets” which are equally called CSS files (. css).
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          How to use js in DOM?
+        </div>
+        <div class="collapse-content">
+          <p>
+            JavaScript, the language of the web, empowers developers to create
+            dynamic and interactive web pages. One of the key features that
+            enables this interactivity is Document Object Model (DOM)
+            manipulation.
+          </p>
+        </div>
+      </div>
+    </main>
+    <script src="js/location2.js"></script>
+  </body>
 </html>

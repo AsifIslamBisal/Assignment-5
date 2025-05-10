@@ -1,217 +1,210 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 5</title>
-       
-          <!-- Daisy ui -->
-          <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-          <script src="https://cdn.tailwindcss.com"></script>
-          <!-- google fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- header section -->
-    <header class="sticky top-0 z-50 backdrop-blur-3xl">
-        <section class="bg-[#F9F7F3] ml-8 mr-8 mt-8  ">
-            <div class="lg:flex justify-between ">
-            <div>
-              
-                <button  class="btn  bg-[#B4F461] font-bold w-36 h-14"> <a href="blog.html">Blog</a></button>
-                
-            </div>
-            <div class="flex gap-8 ">
-            <img src="./assets/logo.png" alt="">
-            <p class="font-bold w-48 pt-5">Donate Bangladesh</p>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog page</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+      </style>
+      
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body class="font-lexend">
+    <header class="sticky top-0 backdrop-blur-3xl">
+      <section class="p-12 flex justify-around">
+        <div class="mr-14">
+          <button id="chng-btn" class="btn btn-success">Blog</button>
+        </div>
+        <div class="flex mr-5">
+          <img class="hidden lg:block" src="./assets/logo.png" alt="" />
+          <p class="lg:m-4 lg:text-xl lg:font-bold">As-Sunnah Foundation</p>
         </div>
         <div class="flex">
-            <img src="./assets/coin.png" alt="">
-            <p class="font-bold w-28 pt-4 pl-2">10000BDT</p>
+          <div class="flex p-2">
+            <img class="pr-2 pb-3" src="./assets/coin.png" alt="" />
+            <span id="bank-balance">10000</span> 
+            <p class="pl-1">BDT</p>
+          </div>
         </div>
-    </div>
-        </section>
-        <section class="flex justify-center border-black pt-12 gap-4">
-            <button class="btn bg-[#B4F461] w-36 h-10 ">Donation</button>
-            <button class="btn font-bold w-36 h-10"> <a href="history.html">History</a></button>
-        </section>
+      </section>
+      <section>
+        <div class="flex justify-center space-x-2">
+          <button id="donation-btn" class="btn btn-success">Donate</button>
+          <button id="history-btn" class="btn">History</button>
+        </div>
     </header>
-    <!-- card section -->
-     <!-- card 1 -->
-    <section class="shadow-2xl mt-8 w-4/5 lg:ml-48 md:pl-14 rounded-xl bg-[#FFFFFF]">
-        <div class="lg:flex gap-16">
-            <div class="pl-8 pt-8"><img src="./assets/noakhali.png" alt=""></div>
-
-            <br>
-            <div class="pt-4 pr-20">
-                <div class=" ">
-                    <button class="flex gap-2 bg-[#F3F3F3] shadow w-24 rounded-md">
-                    <img src="./assets/coin.png" alt="">
-                    <p>0BDT</p>
-                </button>
-                </div>
-                <br/>
-                <h2 class="text-lg font-bold">Donate for Flood at Noakhali, Bangladesh</h2>
-                <p> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential<br/> supplies and  to those affected by this disaster. Every contribution,<br/> big or small, makes  difference. Please join us in supporting the relief<br/> efforts and making a positive impact on the lives of those in need.</p>
-        <br/>
-                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full w-20" /><br/><br/>
-            <!-- donet btn -->
-             <div>
-        
-<button class="btn bg-[#B4F461] w-full" onclick="my_modal_1.showModal()">Donate Now</button>
-<dialog id="my_modal_1" class="modal">
-  <div class="modal-box text-center">
-    <h3 class="text-3xl font-bold">Congrates !</h3>
-    <br/>
-    <img class="pl-48" src="./assets/coin.png" alt="">
-    <p class="py-4">You Have Donated for Humankind</p>
-    <h2 class="font-bold ">Successfully</h2>
-    <div class="modal-action">
-      <form method="dialog">
-        <button class="btn">Close Confirmation</button>
-      </form>
-    </div>
-  </div>
-</dialog>
-                    <br/>
-                    <br/>
-                </div>
-            
-            
-        </div>
-            </section>
-            <!-- card 2 -->
-    <section class="shadow-2xl mt-8 w-4/5 lg:ml-48 rounded-xl">
-<div class="lg:flex">
-    <div class="pl-8 pt-8 scale-75"><img src="./assets/feni.png" alt=""></div>
-
-    <br>
-    <div class="pt-10 pr-20">
-        <div class=" ">
-            <button class="flex gap-2 bg-[#F3F3F3] shadow w-24 rounded-md">
-            <img src="./assets/coin.png" alt="">
-            <p>0BDT</p>
-        </button>
-        </div>
-        <br/>
-        <h2 class="text-lg font-bold">Donate for Flood Relief in Feni,Bangladesh</h2>
-        <p>The recent floods in Feni have devastated local communities, leading<br/>to severe disruption and loss. Your generous donation will help<br/> provide immediate aid, including food, clean water, and medical<br/> supplies, to those affected by this calamity. Together, we can offer<br/> crucial support and help rebuild lives in the aftermath of this disaster.<br/> Every contribution counts towards making a real difference. Please<br/> consider donating today to assist those in urgent need.</p>
-<br/>
-            <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full w-20" /><br/><br/>
-          <!-- donet btn -->
-
-            <button class="btn bg-[#B4F461] w-full" onclick="my_modal_2.showModal()">Donate Now</button>
-            <dialog id="my_modal_2" class="modal">
-              <div class="modal-box text-center">
-                <h3 class="text-3xl font-bold">Congrates !</h3>
-                <br/>
-                <img class="pl-48" src="./assets/coin.png" alt="">
-                <p class="py-4">You Have Donated for Humankind</p>
-                <h2 class="font-bold ">Successfully</h2>
-                <div class="modal-action">
-                  <form method="dialog">
-                    <button class="btn">Close Confirmation</button>
-                  </form>
+    <main>
+     <section  id="main-container"
+      class="lg:w-[1440px] lg:h-[1080] lg:p-24 pt-6">
+        <section class="pt-4">
+          <div class="">
+            <div class="lg:hero lg:bg-base-200">
+              <div class="hero-content flex-col lg:flex-row">
+                <img
+                  src="./assets/noakhali.png"
+                  class="max-w-full mx-auto lg:max-w-lg rounded-lg shadow-2xl"
+                />
+                <div class="p-2">
+                  <div class="flex">
+                    <img src="./assets/coin.png" alt="" />
+                    <span id="donate-money" class="pl-2">0</span>
+                    <p class="pl-3">BDT</p>
+                  </div>
+                  <h1 class="text-xl lg:text-5xl font-bold">
+                    Flooding in Eastern Bangladesh Noakhali
+                  </h1>
+                  <p class="py-6">
+                    Since 20 August 2024, heavy rainfall combined with the release
+                    of water from upstream in India has triggered severe flooding
+                    in several districts of Bangladesh, including Feni, Noakhali,
+                    Comilla, Lakshmipur, Brahmanbaria, Cox's Bazar, Khagrachhari,
+                    Chattogram, Habiganj, and Moulvibazar.The sudden floods have
+                    resulted in the deaths of 13 people, including two women.
+                    Among the deceased, four died in Cumilla, one in Feni, four in
+                    Chattogram, one in Noakhali, one in Brahmanbaria, one in
+                    Lakshmipur, and four in Cox’s Bazar.
+                  </p>
+                  <input
+                    id="add-money-field"
+                    class="w-full lg:w-[500px] h-[45px] p-2"
+                    type="text"
+                    placeholder="Your Donation Amount:"
+                  />
+                  <div class="pt-3 flex justify-center">
+                    <button
+                      id="add-money-btn"
+                      class="btn btn-success w-full lg:w-[400px] h-[45px]"
+                    >
+                      Donate Now
+                    </button>
+                  </div>
                 </div>
               </div>
-            </dialog>
-    
-            <br/>
-            <br/>
-        </div>
-    
-    
-</div>
-    </section>
-    <!-- card 3 -->
-    <section class="shadow-2xl mt-8 w-4/5 lg:ml-48 rounded-xl">
-<div class="lg:flex">
-    <div class="pl-8 pt-4 scale-75"><img src="./assets/quota-protest.png" alt=""></div>
-
-    <br>
-    <div class="pt-10 pr-20">
-        <div class="">
-            <button class="flex gap-2 bg-[#F3F3F3] shadow w-24 rounded-md">
-            <img src="./assets/coin.png" alt="">
-            <p>0BDT</p>
-        </button>
-        </div>
-        <br>
-        <h2 class="text-lg font-bold">Aid for Injured in the Quota Movement</h2>
-        <p>The recent Quota movement has resulted in numerous injuries and<br/>significant hardship for many individuals. Your support is crucial in,<br/> providing medical assistance, rehabilitation, and necessary supplies<br/> to those affected. By contributing, you help ensure that injured<br/> individuals receive the care and support they need during this<br/> challenging time. Every donation plays a vital role in alleviating their<br/> suffering and aiding in their recovery. Please consider making a<br/> donation to support these brave individuals in their time of need.<br/> supplies and  to those affected by this disaster. Every contribution,<br/> big or small, makes  difference. Please join us in supporting the relief<br/> efforts and making a positive impact on the lives of those in need.</p>
-<br/>
-            <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full w-20" /><br/><br/>
-
-                <!-- donet btn -->
-            <button class="btn bg-[#B4F461] w-full" onclick="my_modal_3.showModal()">Donate Now</button>
-            <dialog id="my_modal_3" class="modal">
-              <div class="modal-box text-center">
-                <h3 class="text-3xl font-bold">Congrates !</h3>
-                <br/>
-                <img class="pl-48" src="./assets/coin.png" alt="">
-                <p class="py-4">You Have Donated for Humankind</p>
-                <h2 class="font-bold ">Successfully</h2>
-                <div class="modal-action">
-                  <form method="dialog">
-                    <button class="btn">Close Confirmation</button>
-                  </form>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="pt-4">
+            <div class="hero bg-base-200">
+              <div class="hero-content flex-col lg:flex-row-reverse">
+                <img
+                  src="./assets/feni.png"
+                  class="mx-auto  rounded-lg shadow-2xl"
+                />
+                <div>
+                  <button class="btn">
+                    <img src="./assets/coin.png" alt="" />
+                    <span id="second-donate-money">0</span>
+                    <p>BDT</p>
+                  </button>
+                  <h1 class="text-xl lg:text-5xl font-bold">
+                    Flooding in Eastern Bangladesh Feni
+                  </h1>
+                  <p class="py-6">
+                    The death toll in the recent flash floods in Feni has risen to
+                    23, according to district administration sources as of Friday
+                    night. The floods, caused by the upwelling of water from India
+                    and heavy rains, have submerged six upazilas, leaving hundreds
+                    of thousands of people stranded. The first fatality was
+                    reported on the night of August 24, when locals discovered a
+                    body floating in knee-deep water in front of Sonali Bank on
+                    Mizan Road in Feni.
+                  </p>
+                  <input
+                    id="second-add-money-field"
+                    class="w-full lg:w-[500px] h-[45px] p-2"
+                    type="text"
+                    placeholder="Your Donation Amount:"
+                  />
+                  <div class="pt-3 flex justify-center">
+                    <button
+                      id="second-add-money-btn"
+                      class="btn btn-success w-full lg:w-[400px] h-[45px]"
+                    >
+                      Donate Now
+                    </button>
+                  </div>
                 </div>
               </div>
-            </dialog>
-            <br/>
-            <br/>
-        </div>
-    
-    
-</div>
-    </section>
-    <!-- card 4 -->
-    <section class="shadow-2xl mt-8 w-4/5 lg:ml-48 rounded-xl">
-<div class="lg:flex  gap-16 ">
-    <div class="pl-8 pt-8 "><img class="rounded-lg" src="./assets/Sylet.jpg" alt=""></div>
-
-    <div class="pt-10 pr-20">
-        <div class="pt-4">
-            <button class="flex gap-2 bg-[#F3F3F3] shadow w-24 rounded-md">
-            <img src="./assets/coin.png" alt="">
-            <p>0BDT</p>
-        </button>
-        </div>
-        <br>
-        <h2 class="text-lg font-bold">Donate for Flood at Sylet, Bangladesh</h2>
-        <p>Support flood victims in rural Bangladesh, Sylhet. Disaster relief package will have clean drinking water, perishable foods, comfort and security.
-
-            In sha’ Allah All Donation will go to IQRA Social Welfare Council to distribute to flood victims. Alhamdulillah
-            
-            This is our change to help serve the community locally and or abroad.</p>
-<br/>
-            <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full w-20" /><br/><br/>
-               
-               <!-- donet btn -->
-            <button class="btn bg-[#B4F461] w-full" onclick="my_modal_4.showModal()">Donate Now</button>
-            <dialog id="my_modal_4" class="modal">
-              <div class="modal-box text-center">
-                <h3 class="text-3xl font-bold">Congrates !</h3>
-                <br/>
-                <img class="pl-48" src="./assets/coin.png" alt="">
-                <p class="py-4">You Have Donated for Humankind</p>
-                <h2 class="font-bold ">Successfully</h2>
-                <div class="modal-action">
-                  <form method="dialog">
-                    <button class="btn">Close Confirmation</button>
-                  </form>
+            </div>
+          </div>
+        </section>
+        <section class="pt-4">
+          <div>
+            <div class="hero bg-base-200">
+              <div class="hero-content flex-col lg:flex-row">
+                <img
+                  src="./assets/quota-protest.png"
+                  class="max-w-full mx-auto lg:max-w-lg rounded-lg shadow-2xl"
+                />
+                <div class="p-2">
+                  <button class="btn">
+                    <img src="./assets/coin.png" alt="" />
+                    <span id="third-donate-money">0</span>
+                    <p>BDT</p>
+                  </button>
+                  <h1 class="text-xl lg:text-5xl font-bold">
+                    Bangladesh quota reform movement
+                  </h1>
+                  <p class="py-6 mt-2">
+                    On 15 July 2024, students of Dhaka University were sitting.
+                    with placards and flags in a peaceful protest calling for
+                    reforms, on the quota allocation for government jobs in
+                    Bangladesh. Suddenly, they were attacked by individuals armed
+                    with rods, sticks and clubs with. a few even brandishing
+                    revolvers. Within hours, a pattern emerged across the country
+                    with similar attacks. coordinated,by people believed to be.
+                    members of the Bangladesh Chatra League (BCL), a group
+                    affiliated with the ruling Awami League (AL), against student
+                    protesters.
+                  </p>
+                  <input
+                    id="third-add-money-field"
+                    class="w-full mt-3 lg:w-[500px] h-[45px] p-2"
+                    type="text"
+                    placeholder="Your Donation Amount:"
+                  />
+                  <div class="pt-3 flex justify-center">
+                    <button
+                      id="third-add-money-btn"
+                      class="btn btn-success w-full mt-2 lg:w-[400px] h-[45px]"
+                    >
+                      Donate Now
+                    </button>
+                  </div>
                 </div>
               </div>
-            </dialog>
-            <br/>
-            <br/>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section id="history-container" class="hidden">
+        <div id="show-tranjection" class="text-lg p-8 lg:text-xl font-bold lg:p-10 lg:pl-14 shadow-lg lg:w-[790px] lg:h[100px] ">
+          <p id="date"></p>
         </div>
-    
-    
-</div>
-    </section>
-</body>
-<script src="js/script.js"></script>
+        <div id="second-show-tranjection" class="text-lg p-8 lg:text-xl font-bold lg:p-10 pl-14 shadow-lg lg:w-[790px] lg:h[100px]">
+          <p id="date-card-2"></p>
+        </div>
+        <div id="third-show-tranjection" class="text-lg p-8 lg:text-xl font-bold lg:p-10 lg:pl-14 shadow-lg lg:w-[790px] lg:h[100px]">
+          <p id="date-card-3"></p>
+        </div>
+      </section>
+    </main>
+    <script src="js/location.js"></script>
+    <script src="js/donet1.js"></script>
+    <script src="js/donate.js"></script>
+    <script src="js/donate3.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
